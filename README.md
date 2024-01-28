@@ -1,8 +1,11 @@
 
 # Greetings! We are Team Vietnam
 
-## Introduction
-This GitHub repository contains the source code that was used in FIRST Global Challenge 2022. It was written based on the [public FTC SDK](https://github.com/FIRST-Tech-Challenge/FtcRobotController). To use this program, please download/clone the entire project to your local computer.
+## What is this?
+The GitHub repository contains the source code that was used in FIRST Global Challenge 2022. It was written based on the [public FTC SDK](https://github.com/FIRST-Tech-Challenge/FtcRobotController). To use this program, please download/clone the entire project to your local computer.
+
+## What it does?
+This source code is used to build custom op modes and incorporate them into the FTC RobotController app to control Team Vietnam's FGC 2022 robot. 
 
 ## Requirements
 ### Software requirements
@@ -18,11 +21,11 @@ Notes: it is recommended to download the latest version, which is 21.0.2.
 
 * To install Gradle, please visit the link below:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Gradle package](https://gradle.org/releases/) (Downloading versions)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Gradle package](https://gradle.org/releases/) 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Gradle installation guide](https://gradle.org/install/) (Instructions on installation)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Gradle installation guide](https://gradle.org/install/) 
 
-For more information on Java and Gradle, please visit the Supported Documents sections.
+For more information on Java and Gradle, please checkout the Supported Documents sections.
 
 ### Hardware requirements
 This program is built for [FTC Control System](https://ftc-docs.firstinspires.org/en/latest/programming_resources/shared/control_system_intro/The-FTC-Control-System.html).
@@ -36,8 +39,10 @@ If you are new to robotics or new to the *FIRST* Tech Challenge, then you should
 
 Even if you are an advanced Java programmer, it is helpful to start with the [FTC Blocks tutorial](https://github.com/FIRST-Tech-Challenge/FtcRobotController/wiki/Blocks-Tutorial), and then migrate to the [OnBot Java Tool](https://github.com/FIRST-Tech-Challenge/FtcRobotController/wiki/OnBot-Java-Tutorial) or to [Android Studio](https://github.com/FIRST-Tech-Challenge/FtcRobotController/wiki/Android-Studio-Tutorial) afterwards.
 
+### For advanced developers
+This program contains a developing version that implements localization to locate the position of robot on the FGC 2022's game field. It makes use of an external library to calculate paths. To install this library, please visit [FTC lib installation guide](https://docs.ftclib.org/ftclib/v/v2.0.0/installation).
+
 ### Notice!
-* Gradle can only execute JDK between 8 and 21. Please choose the correct JDK version to install.
 * Remember to choose the correct version based on your platform (Mac, Windows).
 
 ## Downloading this project
@@ -50,39 +55,83 @@ There are many ways you can use to download this repo:
 
 Once you have downloaded and uncompressed (if needed) your folder, you can use Android Studio to import the folder  ("Import project (Eclipse ADT, Gradle, etc.)").
 
-## File hierarchy
-There are two main folder that you need to pay attention most to: [FtcRobotController](/FtcRobotController) and [TeamCode](/TeamCode).
+## File structure
+In [TeamCode module](/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/), our main program is written and divided into 5 main categories: 
 
-The TeamCode folder is the main environment for you to program the robot. The only necessary file to operate the robot is the OpMode file (the inheritance class of class OpMode). 
+* OpModes: this part contains op modes files (Main.java and Test.java), which contains a series of instructions for robot's behaviours. While the Main.java file was mainly used to compete during the FIRST Global Challenge 2022, the Test.java was used to test our localization program.
+![Alt](/TeamCode/imglib/OpMode.png)
 
-![Alt](/TeamCode/imglib/OpMode.png "An example of an OpMode file")
+* Subsystems: a subsystem contains a collection of robot's hardware that function as an unit. For examples, our drivebase (or chassis) is a combination of 4 active dc motors.
+![Alt](/TeamCode/imglib/Subsystems.png)
 
+* Robot: instead of writing directly to the op mode file, we decided to describe the behaviors of our robot or reactions to events on a separate file. Each file in Robot module contains subsystems required for a functional robot (or to test certain features) for each op mode. The Robot.java was used with Main op mode, while the TestRobot.java was used with Test op mode.
+![Alt](/TeamCode/imglib/Robot.png)
+
+* utils: this part contains supported programs to calculate paths, ball projectiles, trajectories, etc.
+![Alt](/TeamCode/imglib/utils.png)
+
+* Constants: this file contains constants. For examples, instead of rewriting the velocity for many mechanisms having the same speed, we could just keep the speed's value in this file (double speed = 0.5).
+![Alt](/TeamCode/imglib/Constants.png)
+
+In [FtcRobotController module](/FtcRobotController/src/main/java/org/firstinspires/ftc/robotcontroller/external/samples), you can find several sample op modes, which can be pasted to your TeamCode module to use as-is. 
+
+For more information, please visit the Supported documents section. 
+
+## Getting started
+
+### Hardware configuration 
+Please follow [this guide](https://ftc-docs.firstinspires.org/en/latest/hardware_and_software_configuration/index.html) for hardware and software configuration. 
+
+After finishing the program, to build the robot code with Gradle (or you can interpret it as uploading the program to the FTC Robot Controller app), please follow these steps:
+
+* Step 1: plug the USB - C cable from your computer to the Control Hub.
+* Step 2: when the connection is established, on the top toolbar, the name of the connected device would prompted next to the green triangle button (run button). Press the green triangle button to build the Robot Controller app and to install it to your control device. 
+* Step 3: if this program is built successful, there would be a green notification that the launch has been successful. 
+
+For more information on how to launch the program, please visit Supported documents section. 
 
 ## Supported documents
 ### User Documentation and Tutorials
-If you doesn't have a Java background, you can access the following documents to learn:
+* If you doesn't have or has a poor **Java background**:
 
-*FIRST* maintains online documentation with information and tutorials on how to use the *FIRST* Tech Challenge software and robot control system.  You can access this documentation using the following link:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Java W3 School tutorials](https://www.w3schools.com/java/)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[FtcRobotController Online Documentation](https://github.com/FIRST-Tech-Challenge/FtcRobotController/wiki)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Java Geeks for Geeks tutorial](https://www.geeksforgeeks.org/java/)
 
-Note that the online documentation is an "evergreen" document that is constantly being updated and edited.  It contains the most current information about the *FIRST* Tech Challenge software and control system.
+* If you want to master **Gradle and its structure**: 
 
-### Javadoc Reference Material
-The Javadoc reference documentation for the FTC SDK is now available online.  Click on the following link to view the FTC SDK Javadoc documentation as a live website:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Gradle User Manual](https://docs.gradle.org/current/userguide/userguide.html)
+
+* If you want to understand more about **Android Studio and its capabilities**:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Android Studio Basics](https://www.youtube.com/watch?v=lNKk-RSL7wg)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Android Developer Courses](https://developer.android.com/courses/android-basics-compose/unit-1)
+
+* If you want to master **Git**: 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Github Basics](https://www.youtube.com/watch?v=1JuYQgpbrW0&t=895s)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Github Completed Usage](https://git-scm.com/book/en/v2) 
+
+* If you want to understand more about **FTC programming**: 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[FTC Programming](https://ftc-docs.firstinspires.org/en/latest/programming_resources/android_studio_java/opmode/opmode.html)
+
+### Javadoc Reference Information
+The Javadoc reference documentation for the FTC SDK is now available online.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[FTC Javadoc Documentation](https://javadoc.io/doc/org.firstinspires.ftc)
 
-### Online User Forum
-For technical questions regarding the Control System or the FTC SDK, please visit the FTC Technology forum:
+### Developers Forum
+For technical questions, there are some forums you could join to ask questions:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[FTC Technology Forum](https://ftcforum.firstinspires.org/forum/ftc-technology)
 
-### Sample OpModes
-This project contains a large selection of Sample OpModes (robot code examples) which can be cut and pasted into your /teamcode folder to be used as-is, or modified to suit your team's needs.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Stack Over Flow](https://stackoverflow.com/)
 
-Samples Folder: &nbsp;&nbsp; [/FtcRobotController/src/main/java/org/firstinspires/ftc/robotcontroller/external/samples](FtcRobotController/src/main/java/org/firstinspires/ftc/robotcontroller/external/samples)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Chief Delphi](https://www.chiefdelphi.com/c/other/first-tech-challenge/60)
 
-The readme.md file located in the [/TeamCode/src/main/java/org/firstinspires/ftc/teamcode](TeamCode/src/main/java/org/firstinspires/ftc/teamcode) folder contains an explanation of the sample naming convention, and instructions on how to copy them to your own project space.
+
 
 
