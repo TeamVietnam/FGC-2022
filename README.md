@@ -132,6 +132,24 @@ For technical questions, there are some forums you could join to ask questions:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Chief Delphi](https://www.chiefdelphi.com/c/other/first-tech-challenge/60)
 
+### Advanced materials
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[April Tag Programming](https://ftc-docs.firstinspires.org/en/latest/apriltag/vision_portal/apriltag_intro/apriltag-intro.html)
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[TensorFlow Programming](https://ftc-docs.firstinspires.org/en/latest/programming_resources/vision/tensorflow_cs_2023/tensorflow-cs-2023.html)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Vision Programming](https://ftc-docs.firstinspires.org/en/latest/programming_resources/vision/vision_overview/vision-overview.html)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[PID Controller](https://docs.ftclib.org/ftclib/features/controllers)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Odometry Youtube series](https://www.youtube.com/watch?v=GEZBYHVHmFQ)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Kalman Filters](https://www.ctrlaltftc.com/advanced/the-kalman-filter)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[FTC Lib](https://docs.ftclib.org/ftclib/v/v2.0.0/)
+
+These two below links are for FIRST Robotics Competition, a different robotics competition, but they are still great examples to demonstrate each topic in details. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[PID Controller mechanism](https://docs.wpilib.org/en/stable/docs/software/advanced-controls/introduction/introduction-to-pid.html)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Kalman Filters mechanism](https://docs.wpilib.org/en/stable/docs/software/advanced-controls/state-space/state-space-observers.html)
 
