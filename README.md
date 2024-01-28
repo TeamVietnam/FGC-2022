@@ -56,7 +56,12 @@ There are many ways you can use to download this repo:
 Once you have downloaded and uncompressed (if needed) your folder, you can use Android Studio to import the folder  ("Import project (Eclipse ADT, Gradle, etc.)").
 
 ## File structure
+
+![Alt](/TeamCode/imglib/TeamCode.png)
+
 In [TeamCode module](/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/), our main program is written and divided into 5 main categories: 
+
+![Alt](/TeamCode/imglib/File_structure.png)
 
 * OpModes: this part contains op modes files (Main.java and Test.java), which contains a series of instructions for robot's behaviours. While the Main.java file was mainly used to compete during the FIRST Global Challenge 2022, the Test.java was used to test our localization program.
 ![Alt](/TeamCode/imglib/OpMode.png)
@@ -85,7 +90,15 @@ Please follow [this guide](https://ftc-docs.firstinspires.org/en/latest/hardware
 After finishing the program, to build the robot code with Gradle (or you can interpret it as uploading the program to the FTC Robot Controller app), please follow these steps:
 
 * Step 1: plug the USB - C cable from your computer to the Control Hub.
-* Step 2: when the connection is established, on the top toolbar, the name of the connected device would prompted next to the green triangle button (run button). Press the green triangle button to build the Robot Controller app and to install it to your control device. 
+
+* Step 2: when the connection is established, on the top toolbar, the name of the connected device would prompted next to the green triangle button (run button). 
+
+![Alt](/TeamCode/imglib/Device_name.png)
+
+Press the green triangle button to build the Robot Controller app and to install it to your control device.
+
+![Alt](/TeamCode/imglib/toolbar.png)
+
 * Step 3: if this program is built successful, there would be a green notification that the launch has been successful. 
 
 For more information on how to launch the program, please visit Supported documents section. 
@@ -117,6 +130,8 @@ For more information on how to launch the program, please visit Supported docume
 * If you want to understand more about **FTC programming**: 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[FTC Programming](https://ftc-docs.firstinspires.org/en/latest/programming_resources/android_studio_java/opmode/opmode.html)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Launching the program with Android Studio](https://ftc-docs.firstinspires.org/en/latest/programming_resources/tutorial_specific/android_studio/creating_op_modes/Creating-and-Running-an-Op-Mode-%28Android-Studio%29.html)
 
 ### Javadoc Reference Information
 The Javadoc reference documentation for the FTC SDK is now available online.
