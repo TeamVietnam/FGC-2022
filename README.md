@@ -8,24 +8,27 @@ This GitHub repository contains the source code that was used in FIRST Global Ch
 ### Software requirements
 To use this project, please first download the [Android Studio](https://developer.android.com/studio) to your local computer.
 
-This program is written in Java language and built by Gradle. To install Java on your local computer, please download the compatible JDK version on Java's official website or you can click the link below:
+This program is written in Java language and built by Gradle. 
+
+* To install Java on your local computer, please download the compatible JDK version on Java's official website or you can click the link below:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Java installation](https://www.oracle.com/java/technologies/downloads/)
 
 Notes: it is recommended to download the latest version, which is 21.0.2.
 
-To install Gradle, please visit the link below:
+* To install Gradle, please visit the link below:
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Gradle package](https://gradle.org/releases/) (Downloading versions)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Gradle installation](https://gradle.org/install/) (Instructions on installation)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Gradle installation guide](https://gradle.org/install/) (Instructions on installation)
 
 For more information on Java and Gradle, please visit the Supported Documents sections.
 
 ### Hardware requirements
-This program is used on [FTC Control System](https://ftc-docs.firstinspires.org/en/latest/programming_resources/shared/control_system_intro/The-FTC-Control-System.html).
+This program is built for [FTC Control System](https://ftc-docs.firstinspires.org/en/latest/programming_resources/shared/control_system_intro/The-FTC-Control-System.html).
 
 ### Language requirements
-Because this program is written in Java, please prepare yourself with some basic understandings of Java's syntax to understand and use this program. In the supported documents section, there are links to online Java's tutorials if you need them.
+Because this program is written in Java, please prepare yourself with some basic understandings of Java's syntax to understand and use this program. In the supported documents section, there are links to online Java's tutorials if needed.
 
 If you are new to robotics or new to the *FIRST* Tech Challenge, then you should consider reviewing the [FTC Blocks Tutorial](https://github.com/FIRST-Tech-Challenge/FtcRobotController/wiki/Blocks-Tutorial) to get familiar with how to use the control system:
 
@@ -48,7 +51,12 @@ There are many ways you can use to download this repo:
 Once you have downloaded and uncompressed (if needed) your folder, you can use Android Studio to import the folder  ("Import project (Eclipse ADT, Gradle, etc.)").
 
 ## File hierarchy
-This program contains
+There are two main folder that you need to pay attention most to: [FtcRobotController](/FtcRobotController) and [TeamCode](/TeamCode).
+
+The TeamCode folder is the main environment for you to program the robot. The only necessary file to operate the robot is the OpMode file (the inheritance class of class OpMode). 
+
+![Alt](/TeamCode/imglib/OpMode.png "An example of an OpMode file")
+
 
 ## Supported documents
 ### User Documentation and Tutorials
@@ -77,4 +85,4 @@ Samples Folder: &nbsp;&nbsp; [/FtcRobotController/src/main/java/org/firstinspire
 
 The readme.md file located in the [/TeamCode/src/main/java/org/firstinspires/ftc/teamcode](TeamCode/src/main/java/org/firstinspires/ftc/teamcode) folder contains an explanation of the sample naming convention, and instructions on how to copy them to your own project space.
 
-# Release Information
+
