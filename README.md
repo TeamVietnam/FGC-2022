@@ -15,7 +15,7 @@ This program is written in the Java language and built by Gradle.
 
 * To install Java on your local computer, please download the compatible JDK version on Java's official website, or you can click the link below:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp[Java installation](https://www.oracle.com/java/technologies/downloads/)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Java installation](https://www.oracle.com/java/technologies/downloads/)
 
 Notes: it is recommended to download the latest version, which is 21.0.2.
 
