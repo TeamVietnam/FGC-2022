@@ -21,9 +21,9 @@ Notes: it is recommended to download the latest version, which is 21.0.2.
 
 * To install Gradle, please visit the link below:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Gradle package](https://gradle.org/releases/) 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Gradle package](https://gradle.org/releases/) 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Gradle installation guide](https://gradle.org/install/) 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Gradle installation guide](https://gradle.org/install/) 
 
 For more information on Java and Gradle, please check out the Supported Documents sections.
 
